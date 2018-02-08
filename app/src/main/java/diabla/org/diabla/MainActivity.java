@@ -2,6 +2,8 @@ package diabla.org.diabla;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,5 +12,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Maldito virusgfjhfh
+
+        findViewById(R.id.Enviar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Tu mensaje se envió", Toast.LENGTH_LONG).show();
+            }
+        };
     }
 }
